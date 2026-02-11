@@ -7,6 +7,12 @@
 // Scripts
 // 
 
+  // Get the current URL's path and query parameters
+const cleanURL = window.location.pathname + window.location.search;
+
+// Use replaceState to update the URL in the address bar
+history.replaceState(null, document.title, cleanURL);
+
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
